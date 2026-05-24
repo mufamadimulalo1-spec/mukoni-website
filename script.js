@@ -3,53 +3,45 @@ function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
   const toggle = document.getElementById('sidebarToggle');
   const overlay = document.getElementById('sidebarOverlay');
+  
+  if (!sidebar || !toggle) return;
+
   sidebar.classList.toggle('open');
   toggle.classList.toggle('open');
+  
+  const isOpen = sidebar.classList.contains('open');
+  
+  // Sync ARIA
+  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+  // Handle Overlay
   if (overlay) {
-    const isOpen = sidebar.classList.contains('open');
     overlay.style.visibility = isOpen ? 'visible' : 'hidden';
     overlay.style.opacity = isOpen ? '1' : '0';
     overlay.style.pointerEvents = isOpen ? 'auto' : 'none';
   }
-}
-// keep aria-expanded in sync
-function _syncSidebarAria() {
-  const sidebar = document.getElementById('sidebar');
-  const toggle = document.getElementById('sidebarToggle');
-  if (!toggle || !sidebar) return;
-  const open = sidebar.classList.contains('open');
-  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-}
 
-// modify toggleSidebar to call aria sync and trap focus lightly
-const originalToggleSidebar = toggleSidebar;
-toggleSidebar = function(){
-  originalToggleSidebar();
-  _syncSidebarAria();
-  // focus trap handling
-  try {
-    const sidebar = document.getElementById('sidebar');
-    const toggle = document.getElementById('sidebarToggle');
-    if (!sidebar) return;
-    const open = sidebar.classList.contains('open');
-    if (open) {
+  // Focus Trap and Gestures
+  if (isOpen) {
       // save previous focused element
       toggle._previousFocus = document.activeElement;
       const focusable = sidebar.querySelectorAll('a, button, input, textarea, [tabindex]:not([tabindex="-1"])');
       const focusables = Array.from(focusable).filter(el => !el.hasAttribute('disabled'));
       if (focusables.length) focusables[0].focus();
-      // trap Tab inside sidebar
       
       // Add swipe to close logic
       let touchStartX = 0;
-      sidebar.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
-      sidebar.addEventListener('touchend', (e) => {
+      const handleTouchStart = (e) => { touchStartX = e.changedTouches[0].screenX; };
+      const handleTouchEnd = (e) => {
         const touchEndX = e.changedTouches[0].screenX;
-        // If swiped right more than 50px, close it
         if (touchEndX - touchStartX > 50) {
           toggleSidebar();
+          sidebar.removeEventListener('touchstart', handleTouchStart);
+          sidebar.removeEventListener('touchend', handleTouchEnd);
         }
-      }, {passive: true});
+      };
+      sidebar.addEventListener('touchstart', handleTouchStart, {passive: true});
+      sidebar.addEventListener('touchend', handleTouchEnd, {passive: true});
 
       toggle._trapHandler = function(e){
         if (e.key !== 'Tab') return;
@@ -62,12 +54,11 @@ toggleSidebar = function(){
         }
       };
       document.addEventListener('keydown', toggle._trapHandler);
-    } else {
-      if (toggle._trapHandler) document.removeEventListener('keydown', toggle._trapHandler);
-      if (toggle._previousFocus && typeof toggle._previousFocus.focus === 'function') toggle._previousFocus.focus();
-      toggle._trapHandler = null; toggle._previousFocus = null;
-    }
-  } catch (err){ console.warn('sidebar focus trap error', err); }
+  } else {
+    if (toggle._trapHandler) document.removeEventListener('keydown', toggle._trapHandler);
+    if (toggle._previousFocus && typeof toggle._previousFocus.focus === 'function') toggle._previousFocus.focus();
+    toggle._trapHandler = null; toggle._previousFocus = null;
+  }
 }
 
 // Slideshow functionality
