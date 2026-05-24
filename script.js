@@ -1,3 +1,14 @@
+// Sync sidebar ARIA attributes
+function _syncSidebarAria() {
+  const sidebar = document.getElementById('sidebar');
+  const toggle = document.getElementById('sidebarToggle');
+  if (!sidebar || !toggle) return;
+  
+  const isOpen = sidebar.classList.contains('open');
+  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  sidebar.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+}
+
 // Sidebar toggle functionality
 function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
@@ -13,6 +24,7 @@ function toggleSidebar() {
   
   // Sync ARIA
   toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  sidebar.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
 
   // Handle Overlay
   if (overlay) {
