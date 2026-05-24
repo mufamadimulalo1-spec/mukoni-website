@@ -820,6 +820,75 @@ button:focus, a:focus, input:focus, textarea:focus{
 /* Make embedded PDF responsive */
 .pdf-viewer iframe{ width:100%; height:70vh; min-height:420px; border:0; }
 
+/* Download button next to viewer */
+.download-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  border-radius:10px;
+  background:transparent;
+  border:2px solid rgba(176,141,87,0.12);
+  color:var(--accent);
+  text-decoration:none;
+  transition:background 180ms, transform 180ms, color 180ms;
+}
+.download-btn:hover{ background:rgba(176,141,87,0.06); transform:translateY(-2px); }
+.download-btn svg{ width:20px; height:20px; display:block; }
+
+@media (max-width:480px){
+  .download-btn{ width:42px; height:42px; }
+}
+
+/* Social panel and WhatsApp float */
+.social-panel{
+  position:fixed;
+  left:16px;
+  bottom:16px;
+  display:flex;
+  gap:10px;
+  z-index:1200;
+}
+.social-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background:rgba(255,255,255,0.03);
+  color:var(--text);
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.03);
+  transition:transform 150ms, background 150ms;
+}
+.social-link:hover{ transform:translateY(-3px); background:rgba(176,141,87,0.08); }
+
+.whatsapp-float{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  width:56px;
+  height:56px;
+  border-radius:999px;
+  background:#25D366;
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-shadow:0 14px 30px rgba(37,211,102,0.14);
+  z-index:1300;
+  transition:transform 160ms, box-shadow 160ms;
+}
+.whatsapp-float:hover{ transform:translateY(-4px); box-shadow:0 22px 40px rgba(37,211,102,0.18); }
+
+@media (max-width:600px){
+  .social-panel{ left:10px; bottom:72px; }
+  .whatsapp-float{ right:12px; bottom:12px; width:48px; height:48px; }
+}
+
 
 .enquiry-btn{
   display:inline-block;
