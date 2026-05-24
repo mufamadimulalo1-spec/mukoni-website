@@ -2,8 +2,15 @@
 function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
   const toggle = document.getElementById('sidebarToggle');
+  const overlay = document.getElementById('sidebarOverlay');
   sidebar.classList.toggle('open');
   toggle.classList.toggle('open');
+  if (overlay) {
+    const isOpen = sidebar.classList.contains('open');
+    overlay.style.visibility = isOpen ? 'visible' : 'hidden';
+    overlay.style.opacity = isOpen ? '1' : '0';
+    overlay.style.pointerEvents = isOpen ? 'auto' : 'none';
+  }
 }
 // keep aria-expanded in sync
 function _syncSidebarAria() {
@@ -32,6 +39,18 @@ toggleSidebar = function(){
       const focusables = Array.from(focusable).filter(el => !el.hasAttribute('disabled'));
       if (focusables.length) focusables[0].focus();
       // trap Tab inside sidebar
+      
+      // Add swipe to close logic
+      let touchStartX = 0;
+      sidebar.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
+      sidebar.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        // If swiped right more than 50px, close it
+        if (touchEndX - touchStartX > 50) {
+          toggleSidebar();
+        }
+      }, {passive: true});
+
       toggle._trapHandler = function(e){
         if (e.key !== 'Tab') return;
         const first = focusables[0];
@@ -187,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // No backend: fallback to mailto with prefilled subject/body
     const subject = encodeURIComponent('Website Enquiry from ' + name);
     const body = encodeURIComponent(message + '\n\nFrom: ' + name + ' <' + email + '>');
-    window.location.href = `mailto:mufamadimulalo1@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:mufamadimulalo@gmail.com?subject=${subject}&body=${body}`;
     showMessage('success', 'Opening your email client to send message...');
     form.reset();
   });
@@ -237,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.addEventListener('click', () => {
       const subject = encodeURIComponent(submitButton.dataset.subject || 'Service Enquiry');
       const body = submitButton.dataset.body || 'Hello Mukoni,%0D%0A%0D%0AI am interested in your services.';
-      window.location.href = `mailto:mufamadimulalo1@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:mufamadimulalo@gmail.com?subject=${subject}&body=${body}`;
       closeEnquiryModal();
     });
   }
@@ -274,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const subject = encodeURIComponent((modal.querySelector('#enquiryTitle')?.textContent || 'Service Enquiry'));
       const bodyText = `${message}\n\nFrom: ${name}${company ? ' ('+company+')' : ''}${phone ? '\nPhone: '+phone : ''}\nEmail: ${email}`;
       const body = encodeURIComponent(bodyText);
-      window.location.href = `mailto:mufamadimulalo1@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:mufamadimulalo@gmail.com?subject=${subject}&body=${body}`;
       closeEnquiryModal();
     });
   }
@@ -283,81 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const wa = document.getElementById('whatsappBtn');
   if (wa) wa.addEventListener('keydown', (e) => { if (e.key === 'Enter') wa.click(); });
 });
-
-// Services slider: only page from right to left (forward) using the Next button
-(function(){
-  const slider = document.getElementById('servicesSlider');
-  if (!slider) return;
-  const track = document.getElementById('servicesTrack');
-  const prevBtn = document.getElementById('servicesPrev');
-  const nextBtn = document.getElementById('servicesNext');
-  let currentPage = 0;
-
-  function perPage(){ return window.innerWidth < 900 ? 1 : 2; }
-
-  function updateNextState(){
-    const total = track.children.length;
-    const pages = Math.max(1, Math.ceil(total / perPage()));
-    if (nextBtn) nextBtn.disabled = currentPage >= pages - 1;
-    if (prevBtn) prevBtn.disabled = currentPage <= 0;
-  }
-
-  function goToPage(page){
-    const pageWidth = slider.clientWidth;
-    const maxPage = Math.max(0, Math.ceil(track.children.length / perPage()) - 1);
-    if (page < 0) page = 0;
-    if (page > maxPage) page = maxPage;
-    currentPage = page;
-    const offset = currentPage * pageWidth;
-    track.style.transform = `translateX(${ -offset }px)`;
-    updateNextState();
-  }
-
-  // Next and Prev button handling
-  if (nextBtn) nextBtn.addEventListener('click', () => {
-    const pages = Math.max(1, Math.ceil(track.children.length / perPage()));
-    if (currentPage < pages - 1) goToPage(currentPage + 1);
-  });
-  if (prevBtn) prevBtn.addEventListener('click', () => {
-    if (currentPage > 0) goToPage(currentPage - 1);
-  });
-
-  // Wheel: scroll down/right -> forward, up/left -> back
-  slider.addEventListener('wheel', (e) => {
-    if (e.deltaY > 8) {
-      e.preventDefault();
-      const pages = Math.max(1, Math.ceil(track.children.length / perPage()));
-      if (currentPage < pages - 1) goToPage(currentPage + 1);
-    } else if (e.deltaY < -8) {
-      e.preventDefault();
-      if (currentPage > 0) goToPage(currentPage - 1);
-    }
-  }, { passive:false });
-
-  // Touch swipe support
-  let touchStartX = null;
-  slider.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
-  slider.addEventListener('touchend', (e) => {
-    if (touchStartX === null) return;
-    const dx = touchStartX - e.changedTouches[0].clientX;
-    const threshold = 50;
-    if (dx > threshold) { // swipe left -> forward
-      const pages = Math.max(1, Math.ceil(track.children.length / perPage()));
-      if (currentPage < pages - 1) goToPage(currentPage + 1);
-    } else if (dx < -threshold) { // swipe right -> back
-      if (currentPage > 0) goToPage(currentPage - 1);
-    }
-    touchStartX = null;
-  }, { passive: true });
-
-  // Recompute on resize
-  window.addEventListener('resize', () => goToPage(currentPage));
-
-  // Initialize
-  track.style.willChange = 'transform';
-  track.style.transform = 'translateX(0)';
-  updateNextState();
-})();
 
 // Sidebar Services submenu toggle
 (function(){
