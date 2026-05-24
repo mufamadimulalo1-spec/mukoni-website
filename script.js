@@ -290,11 +290,19 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const subject = encodeURIComponent((modal.querySelector('#enquiryTitle')?.textContent || 'Service Enquiry'));
-      const bodyText = `${message}\n\nFrom: ${name}${company ? ' ('+company+')' : ''}${phone ? '\nPhone: '+phone : ''}\nEmail: ${email}`;
-      const body = encodeURIComponent(bodyText);
-      window.location.href = `mailto:mufamadimulalo@gmail.com?subject=${subject}&body=${body}`;
-      closeEnquiryModal();
+      // Submit to Netlify
+      const formData = new FormData(modalForm);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+      .then(() => {
+        alert('Thank you! Your enquiry has been sent.');
+        closeEnquiryModal();
+        modalForm.reset();
+      })
+      .catch((error) => alert(error));
     });
   }
 
