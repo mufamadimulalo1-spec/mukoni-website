@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="title-hero-logistics desc-hero-logistics">
+  <title id="title-hero-logistics">Logistics and transport</title>
+  <desc id="desc-hero-logistics">Stylized logistics illustration evoking transport, coordination and fleet movement with brand tones.</desc>
+  <defs>
+    <linearGradient id="c" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#161616"/>
+      <stop offset="100%" stop-color="#0F0F0F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#c)"/>
+  <path d="M0 180 L1200 260 L1200 800 L0 800 Z" fill="#111" opacity="0.72"/>
+  <path d="M0 0 L1200 0 L1200 180 L60 140 Z" fill="#B08D57" opacity="0.1"/>
+  <path d="M380 520h320l50-120H430z" fill="#C0C0C0" opacity="0.14"/>
+  <path d="M680 520c0-44 32-80 72-80h90v90H752" stroke="#B08D57" stroke-width="18" fill="none" opacity="0.9"/>
+  <path d="M410 560c15 18 39 24 66 18" stroke="#B08D57" stroke-width="16" fill="none" opacity="0.24"/>
+  <path d="M730 580h140" stroke="#C0C0C0" stroke-width="18" opacity="0.18"/>
+  <circle cx="990" cy="220" r="150" fill="#B08D57" opacity="0.12"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-service-technical desc-service-technical">
+  <title id="title-service-technical">Technical maintenance icon</title>
+  <desc id="desc-service-technical">Clean gear icon representing technical services in Mukoni colors.</desc>
+  <rect width="240" height="240" rx="30" fill="#0f0f10"/>
+  <defs>
+    <linearGradient id="gT" x1="0" x2="1">
+      <stop offset="0" stop-color="#B08D57"/>
+      <stop offset="1" stop-color="#C0C0C0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(60,50)" fill="none" stroke="url(#gT)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="60" cy="60" r="44"/>
+    <g stroke-width="8">
+      <path d="M60 12v16"/>
+      <path d="M60 108v16"/>
+      <path d="M12 60h16"/>
+      <path d="M108 60h16"/>
+    </g>
+  </g>
+  <path d="M40 170h160" stroke="rgba(255,255,255,0.03)" stroke-width="8"/>
+</svg>

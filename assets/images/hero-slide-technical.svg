@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="title-hero-technical desc-hero-technical">
+  <title id="title-hero-technical">Technical services</title>
+  <desc id="desc-hero-technical">Abstract technical illustration suggesting maintenance, gears and structured support with metallic color accents.</desc>
+  <defs>
+    <linearGradient id="b" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#161616"/>
+      <stop offset="100%" stop-color="#0F0F0F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#b)"/>
+  <path d="M0 520 L1200 450 L1200 800 L0 800 Z" fill="#111" opacity="0.75"/>
+  <path d="M150 120 L1050 90 L1060 420 L172 450 Z" fill="#B08D57" opacity="0.09"/>
+  <circle cx="900" cy="320" r="170" fill="#C0C0C0" opacity="0.12"/>
+  <g fill="none" stroke="#B08D57" stroke-width="16" stroke-linecap="round">
+    <path d="M420 220h100"/>
+    <path d="M420 280h160"/>
+    <path d="M420 340h120"/>
+  </g>
+  <path d="M320 500c40-20 90-26 138-6 56 24 82 68 112 80" stroke="#C0C0C0" stroke-width="18" fill="none" opacity="0.2"/>
+  <path d="M970 500c-42 25-92 34-140 18" stroke="#B08D57" stroke-width="15" fill="none" opacity="0.3"/>
+  <g fill="#B08D57" opacity="0.8">
+    <circle cx="830" cy="150" r="22"/>
+    <circle cx="765" cy="230" r="18"/>
+    <circle cx="920" cy="280" r="14"/>
+  </g>
+</svg>

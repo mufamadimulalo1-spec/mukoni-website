@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="techCard" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#131313"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+  </defs>
+  <rect width="380" height="260" rx="24" fill="url(#techCard)"/>
+  <path d="M56 70h240c10 0 18 8 18 18v108c0 10-8 18-18 18H56c-10 0-18-8-18-18V88c0-10 8-18 18-18Z" fill="#111" opacity="0.66"/>
+  <path d="M86 100h180" stroke="#B08D57" stroke-width="14" stroke-linecap="round"/>
+  <path d="M86 136h140" stroke="#B08D57" stroke-width="12" stroke-linecap="round" opacity="0.85"/>
+  <path d="M86 172h100" stroke="#B08D57" stroke-width="12" stroke-linecap="round" opacity="0.65"/>
+  <circle cx="320" cy="190" r="24" fill="#B08D57" opacity="0.22"/>
+  <path d="M280 148h60" stroke="#C0C0C0" stroke-width="12" stroke-linecap="round" opacity="0.18"/>
+</svg>

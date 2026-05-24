@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="opsCard" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0B0B0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="380" height="260" rx="24" fill="url(#opsCard)"/>
+  <path d="M72 88h98" stroke="#B08D57" stroke-width="16" stroke-linecap="round"/>
+  <path d="M72 126h70" stroke="#B08D57" stroke-width="14" stroke-linecap="round"/>
+  <path d="M72 164h110" stroke="#B08D57" stroke-width="14" stroke-linecap="round"/>
+  <rect x="228" y="92" width="78" height="52" rx="12" fill="#C0C0C0" opacity="0.18"/>
+  <rect x="228" y="156" width="62" height="28" rx="10" fill="#B08D57" opacity="0.16"/>
+  <path d="M120 196h120" stroke="#B08D57" stroke-width="18" stroke-linecap="round" opacity="0.24"/>
+  <path d="M98 204h40" stroke="#C0C0C0" stroke-width="12" stroke-linecap="round" opacity="0.3"/>
+  <circle cx="290" cy="190" r="24" fill="#B08D57" opacity="0.22"/>
+</svg>

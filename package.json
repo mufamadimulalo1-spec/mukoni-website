@@ -1,0 +1,9 @@
+{
+  "name": "mukoni-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve -s . -l 5000",
+    "audit:pa11y": "npx pa11y http://localhost:5000"
+  }
+}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-service-cleaning desc-service-cleaning">
+  <title id="title-service-cleaning">Cleaning and hygiene icon</title>
+  <desc id="desc-service-cleaning">Icon representing cleaning tools and hygiene for commercial services in Mukoni brand colors.</desc>
+    <desc id="desc-service-cleaning">Minimal cleaning icon: mop head and sparkles in Mukoni palette.</desc>
+    <defs>
+      <linearGradient id="gC" x1="0" x2="1">
+        <stop offset="0" stop-color="#B08D57"/>
+        <stop offset="1" stop-color="#C0C0C0"/>
+      </linearGradient>
+    </defs>
+    <rect width="240" height="240" rx="30" fill="#0f0f10"/>
+  <g fill="none" stroke="url(#cleanGradient)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 60c10-18 25-28 42-28s32 10 42 28"/>
+    <path d="M120 60v130"/>
+    <path d="M70 80l-22 22M170 80l22 22"/>
+    <path d="M60 170h120"/>
+    <path d="M90 190h60"/>
+  </g>
+  <g fill="#B08D57" opacity="0.6">
+    <circle cx="180" cy="75" r="10"/>
+    <circle cx="192" cy="105" r="6"/>
+    <circle cx="160" cy="95" r="7"/>
+  </g>
+    <g fill="none" stroke="url(#gC)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M70 150c20-20 40-30 60-30s40 10 60 30"/>
+      <path d="M120 120v30"/>
+      <path d="M110 162v28c0 6 8 10 16 10s16-4 16-10v-28"/>
+    </g>
+    <g fill="#B08D57" opacity="0.9">
+      <circle cx="170" cy="60" r="6"/>
+      <circle cx="190" cy="82" r="4"/>
+      <circle cx="150" cy="82" r="4"/>
+    </g>
+  </svg>

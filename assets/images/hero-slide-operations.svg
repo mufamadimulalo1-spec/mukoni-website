@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="title-hero-operations desc-hero-operations">
+  <title id="title-hero-operations">Operations and coordination</title>
+  <desc id="desc-hero-operations">Abstract operations illustration representing workflow, supervision and project coordination in brand palette.</desc>
+  <defs>
+    <linearGradient id="d" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#161616"/>
+      <stop offset="100%" stop-color="#0F0F0F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#d)"/>
+  <path d="M0 230 L1200 160 L1200 800 L0 800 Z" fill="#111" opacity="0.7"/>
+  <path d="M240 120h700l-80 260H330z" fill="#C0C0C0" opacity="0.12"/>
+  <circle cx="920" cy="510" r="160" fill="#B08D57" opacity="0.1"/>
+  <path d="M360 280h140" stroke="#B08D57" stroke-width="18" stroke-linecap="round"/>
+  <path d="M360 340h220" stroke="#B08D57" stroke-width="18" stroke-linecap="round"/>
+  <path d="M360 400h160" stroke="#B08D57" stroke-width="18" stroke-linecap="round"/>
+  <path d="M730 470h220" stroke="#C0C0C0" stroke-width="18" stroke-linecap="round" opacity="0.18"/>
+  <path d="M780 520h130" stroke="#B08D57" stroke-width="16" stroke-linecap="round" opacity="0.32"/>
+</svg>

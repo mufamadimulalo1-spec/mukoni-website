@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Mukoni Integrated Service</title>
+  <meta name="theme-color" content="#111111">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-detail">
+  <div class="header-logo">
+    <a href="index.html">
+      <img src="assets/images/mukoni-logo.png" alt="Mukoni Logo" class="logo-fixed" loading="lazy" decoding="async">
+    </a>
+  </div>
+
+  <button id="sidebarToggle" class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Main navigation">
+    <button class="close-sidebar" onclick="toggleSidebar()" aria-label="Close menu">&times;</button>
+    <div class="sidebar-content">
+      <a href="index.html" class="sidebar-link" onclick="toggleSidebar()">Home</a>
+      <a href="about.html" class="sidebar-link" onclick="toggleSidebar()">About</a>
+    </div>
+  </aside>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="company-name">Mukoni Services</h1>
+      <p class="tagline">Detailed Service Offerings</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="content-wrapper">
+      <div class="service-block" id="cleaning">
+        <div class="service-icon-inline">
+          <img src="assets/images/service-cleaning.svg" alt="Cleaning and hygiene icon" loading="lazy" decoding="async">
+        </div>
+        <h3>1. Cleaning & Hygiene Division</h3>
+        <p>
+          Comprehensive cleaning and hygiene solutions designed to keep facilities safe, healthy, and presentable.
+          Our teams maintain compliance standards and deliver industrial-scale sanitation coverage.
+        </p>
+        <a href="cleaning.html" class="learn-more-btn">Open Cleaning Service Page</a>
+      </div>
+
+      <div class="service-block" id="technical">
+        <div class="service-icon-inline">
+          <img src="assets/images/service-technical.svg" alt="Technical and engineering icon" loading="lazy" decoding="async">
+        </div>
+        <h3>2. Technical & Engineering Division</h3>
+        <p>
+          Skilled engineering teams deliver preventative and reactive maintenance to keep equipment reliable,
+          reduce downtime, and support long-term asset performance.
+        </p>
+        <a href="technical.html" class="learn-more-btn">Open Technical Service Page</a>
+      </div>
+
+      <div class="service-block" id="logistics">
+        <div class="service-icon-inline">
+          <img src="assets/images/service-logistics.svg" alt="Logistics and supply chain icon" loading="lazy" decoding="async">
+        </div>
+        <h3>3. Logistics & Supply Chain Division</h3>
+        <p>
+          Efficient logistics and supply chain services that ensure materials, equipment and goods move quickly,
+          safely, and with full traceability from source to destination.
+        </p>
+        <a href="logistics.html" class="learn-more-btn">Open Logistics Service Page</a>
+      </div>
+
+      <div class="service-block" id="operations">
+        <div class="service-icon-inline">
+          <img src="assets/images/service-operations.svg" alt="Operations and coordination icon" loading="lazy" decoding="async">
+        </div>
+        <h3>4. Operations & Coordination Division</h3>
+        <p>
+          Integrated operations management services that align people, processes and performance to deliver
+          consistent project outcomes and reliable service delivery.
+        </p>
+        <a href="operations.html" class="learn-more-btn">Open Operations Service Page</a>
+      </div>
+
+      <a href="index.html" class="sidebar-link">Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

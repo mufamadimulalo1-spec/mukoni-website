@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-service-logistics desc-service-logistics">
+  <title id="title-service-logistics">Logistics icon</title>
+  <desc id="desc-service-logistics">Clean truck and route icon representing logistics in brand colors.</desc>
+  <rect width="240" height="240" rx="30" fill="#0f0f10"/>
+  <defs>
+    <linearGradient id="gL" x1="0" x2="1">
+      <stop offset="0" stop-color="#B08D57"/>
+      <stop offset="1" stop-color="#C0C0C0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#gL)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="42" y="100" width="120" height="48" rx="8"/>
+    <rect x="162" y="120" width="30" height="28" rx="6"/>
+    <circle cx="82" cy="160" r="12"/>
+    <circle cx="182" cy="160" r="12"/>
+  </g>
+  <path d="M36 88h168" stroke="rgba(255,255,255,0.03)" stroke-width="6"/>
+</svg>

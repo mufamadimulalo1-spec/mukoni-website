@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-service-operations desc-service-operations">
+  <title id="title-service-operations">Operations icon</title>
+  <desc id="desc-service-operations">Simplified operations icon showing dashboard tiles and checkmark in Mukoni tones.</desc>
+  <rect width="240" height="240" rx="30" fill="#0f0f10"/>
+  <defs>
+    <linearGradient id="gO" x1="0" x2="1">
+      <stop offset="0" stop-color="#B08D57"/>
+      <stop offset="1" stop-color="#C0C0C0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#gO)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="48" y="64" width="56" height="48" rx="6"/>
+    <rect x="112" y="64" width="72" height="48" rx="6"/>
+    <rect x="48" y="122" width="136" height="56" rx="6"/>
+  </g>
+  <path d="M160 134l18 18 36-36" fill="none" stroke="rgba(176,141,87,0.95)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
