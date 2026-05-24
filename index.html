@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
@@ -50,164 +51,19 @@
     </div>
   </aside>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION - Simplified to Company Profile CTA -->
 
-  <section class="hero">
-    <div class="hero-copy hero-copy-compact">
-      <span class="eyebrow">ONE COMPANY. CLEAR PERFORMANCE.</span>
-      <h1>Premium service delivery with precision, trust, and operational excellence.</h1>
-      <p class="hero-summary">Mukoni brings executed projects, measurable satisfaction and a strong service promise to government, mining and commercial clients.</p>
-      <div class="hero-actions">
-        <a href="services.html" class="primary-btn">Explore Services</a>
-        <a href="#contact" class="secondary-btn">Contact Us</a>
-      </div>
-    </div>
-
-    <div class="hero-media">
-      <div class="slideshow-container" role="region" aria-roledescription="carousel" aria-label="Hero slideshow">
-        <div class="slides-wrapper" aria-live="polite">
-          <div class="slide fade" aria-hidden="false">
-            <img class="slide-img" src="assets/images/hero-slide-cleaning.svg" alt="Previous Mukoni project delivery" />
-            <div class="slide-text">
-              <h2>Previous Projects</h2>
-              <p>Delivered turnkey service programs for mining, government and commercial facilities with consistent execution.</p>
-            </div>
-          </div>
-          <div class="slide" aria-hidden="true">
-            <img class="slide-img" src="assets/images/hero-slide-technical.svg" alt="Satisfied Mukoni customer review" />
-            <div class="slide-text">
-              <h2>Customer Satisfaction</h2>
-              <p>Trusted by clients for responsive support, reliable delivery and safe, quality-focused service outcomes.</p>
-            </div>
-          </div>
-          <div class="slide" aria-hidden="true">
-            <img class="slide-img" src="assets/images/hero-slide-logistics.svg" alt="Mukoni service team motto" />
-            <div class="slide-text">
-              <h2>Our Motto</h2>
-              <p>Performance, precision and partnership guide every engagement at Mukoni.</p>
-            </div>
-          </div>
-          <div class="slide" aria-hidden="true">
-            <img class="slide-img" src="assets/images/hero-slide-operations.svg" alt="Reliable service delivery from Mukoni" />
-            <div class="slide-text">
-              <h2>Built for Reliability</h2>
-              <p>Every job is managed to a premium standard, from planning through handover.</p>
-            </div>
-          </div>
-        </div>
-        <div id="slideAnnouncer" class="visually-hidden" aria-live="polite"></div>
-        <button class="prev" type="button" aria-label="Previous slide">&#10094;</button>
-        <button class="next" type="button" aria-label="Next slide">&#10095;</button>
-      </div>
-      <div class="dots-container" role="tablist" aria-label="Slide controls">
-        <button class="dot" onclick="currentSlide(0)" aria-label="Show slide 1" aria-current="true"></button>
-        <button class="dot" onclick="currentSlide(1)" aria-label="Show slide 2" aria-current="false"></button>
-        <button class="dot" onclick="currentSlide(2)" aria-label="Show slide 3" aria-current="false"></button>
-        <button class="dot" onclick="currentSlide(3)" aria-label="Show slide 4" aria-current="false"></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES SECTION -->
-
-  <section class="services">
-
-    <h2 class="services-title">OUR SERVICES</h2>
-
-    <div class="service-grid">
-      
-      <!-- Cleaning -->
-
-      <div class="service-box animate-on-scroll" tabindex="0" role="button" aria-pressed="false">
-        <div class="service-thumb">
-          <img src="assets/images/hero-slide-cleaning.svg" alt="Cleaning and hygiene service image" loading="lazy" decoding="async">
-        </div>
-        <h3>Cleaning & Hygiene</h3>
-
-        <div class="service-content">
-
-          <p>
-            Commercial cleaning, sanitation, deep cleaning,
-            hygiene maintenance and waste management solutions.
-          </p>
-
-        </div>
-
-        <div class="service-actions">
-          <button class="enquiry-trigger" data-service="Cleaning & Hygiene">Enquire</button>
-          <a href="cleaning.html" class="learn-more-btn">Learn More</a>
+  <section class="hero-simplified">
+    <div class="hero-content">
+      <div class="content-wrapper">
+        <h1>Welcome to Mukoni Integrated Services</h1>
+        <p class="hero-subtitle">Premium service delivery with precision, trust, and operational excellence.</p>
+        <p class="hero-description">Mukoni brings executed projects, measurable satisfaction and a strong service promise to government, mining and commercial clients. Explore our complete company profile to learn more about our capabilities, certifications, and service delivery track record.</p>
+        <div class="hero-cta" role="region" aria-label="Main call-to-action">
+          <a href="viewer.html" class="primary-btn primary-btn-lg">View Company Profile</a>
+          <a href="#contact" class="secondary-btn">Contact Us</a>
         </div>
       </div>
-
-      <!-- Technical -->
-
-      <div class="service-box animate-on-scroll" tabindex="0" role="button" aria-pressed="false">
-        <div class="service-thumb">
-          <img src="assets/images/hero-slide-technical.svg" alt="Technical services service image" loading="lazy" decoding="async">
-        </div>
-        <h3>Technical Services</h3>
-
-        <div class="service-content">
-
-          <p>
-            Maintenance support, equipment handling,
-            repairs, installations and technical assistance.
-          </p>
-
-        </div>
-
-        <div class="service-actions">
-          <button class="enquiry-trigger" data-service="Technical Services">Enquire</button>
-          <a href="technical.html" class="learn-more-btn">Learn More</a>
-        </div>
-      </div>
-
-      <!-- Logistics -->
-
-      <div class="service-box animate-on-scroll" tabindex="0" role="button" aria-pressed="false">
-        <div class="service-thumb">
-          <img src="assets/images/hero-slide-logistics.svg" alt="Logistics service image" loading="lazy" decoding="async">
-        </div>
-        <h3>Logistics</h3>
-
-        <div class="service-content">
-
-          <p>
-            Transportation coordination, deliveries,
-            fleet support and logistics management.
-          </p>
-
-        </div>
-
-        <div class="service-actions">
-          <button class="enquiry-trigger" data-service="Logistics">Enquire</button>
-          <a href="logistics.html" class="learn-more-btn">Learn More</a>
-        </div>
-      </div>
-
-      <!-- Operations -->
-
-      <div class="service-box animate-on-scroll" tabindex="0" role="button" aria-pressed="false">
-        <div class="service-thumb">
-          <img src="assets/images/hero-slide-operations.svg" alt="Operations service image" loading="lazy" decoding="async">
-        </div>
-        <h3>Operations</h3>
-
-        <div class="service-content">
-
-          <p>
-            Workforce coordination, project support,
-            administration and operational solutions.
-          </p>
-
-        </div>
-
-        <div class="service-actions">
-          <button class="enquiry-trigger" data-service="Operations">Enquire</button>
-          <a href="operations.html" class="learn-more-btn">Learn More</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -229,92 +85,16 @@
 
   <section class="profile-download">
     <div class="content-wrapper">
-      <h2>View Company Profile</h2>
-      <p>Access Mukoni's full corporate profile, including our certifications, service capabilities, and past project highlights.</p>
-      <div style="text-align:center;margin:20px 0;display:flex;gap:12px;justify-content:center;align-items:center;">
+      <h2>Ready to Learn More?</h2>
+      <p>Download or view our comprehensive company profile to explore our full service capabilities, certifications, and project delivery record.</p>
+      <div style="text-align:center;margin:20px 0;display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;">
         <a href="viewer.html" class="primary-btn" style="padding:14px 22px;">View Company Profile</a>
         <a href="assets/Pdf/Mukoni-Company-Profile.pdf" download class="download-btn" title="Download Company Profile" aria-label="Download Company Profile">
-          <!-- simple download SVG icon -->
+          <!-- Download icon -->
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.67v4h6V9h3.67L12 2z" fill="currentColor"/>
           </svg>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="portfolio">
-    <div class="content-wrapper">
-      <h2>Tender Portfolio</h2>
-      <p>Selected tenders and awarded contracts that demonstrate our ability to deliver complex service programs.</p>
-      <div class="portfolio-grid">
-        <article class="portfolio-card">
-          <h3>Government Facility Services</h3>
-          <p>High-standard hygiene and operations services for a government department facility.</p>
-        </article>
-        <article class="portfolio-card">
-          <h3>Mining Equipment Support</h3>
-          <p>Technical maintenance and logistics support delivered across remote mining sites.</p>
-        </article>
-        <article class="portfolio-card">
-          <h3>Commercial Campus Management</h3>
-          <p>Integrated cleaning, operations and supply chain management for a corporate campus.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="gallery">
-    <div class="content-wrapper">
-      <h2>Gallery</h2>
-      <p>Visual highlights from our delivered projects, teams, and site readiness work.</p>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="assets/images/hero-slide-cleaning.svg" alt="Cleaning project gallery image" loading="lazy" decoding="async">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/hero-slide-technical.svg" alt="Technical service gallery image" loading="lazy" decoding="async">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/hero-slide-logistics.svg" alt="Logistics project gallery image" loading="lazy" decoding="async">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/hero-slide-operations.svg" alt="Operations service gallery image" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <div class="content-wrapper">
-      <h2>Client Testimonials</h2>
-      <p>What our clients say about Mukoni's performance, quality, and dependable service delivery.</p>
-      <div class="testimonial-grid">
-        <article class="testimonial-card">
-          <p>"Mukoni delivered beyond expectations with a responsive team and exceptionally clean work standards."</p>
-          <span>— Regional Facilities Manager</span>
-        </article>
-        <article class="testimonial-card">
-          <p>"The technical and logistics support kept our site fully operational throughout a difficult season."</p>
-          <span>— Operations Director</span>
-        </article>
-        <article class="testimonial-card">
-          <p>"Professional, reliable and always on schedule — Mukoni is our go-to partner for facility services."</p>
-          <span>— Project Procurement Lead</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="client-logos">
-    <div class="content-wrapper">
-      <h2>Trusted By Leading Clients</h2>
-      <div class="logo-grid">
-        <div class="client-logo">Government</div>
-        <div class="client-logo">Mining</div>
-        <div class="client-logo">Construction</div>
-        <div class="client-logo">Infrastructure</div>
-        <div class="client-logo">Corporate</div>
       </div>
     </div>
   </section>
