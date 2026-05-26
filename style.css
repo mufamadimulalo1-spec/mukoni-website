@@ -538,15 +538,22 @@ section{
 .services{
   background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent), var(--bg-secondary);
   text-align:center;
-  padding-top:40px;
+  padding:60px 20px;
 }
 
-.services-title{
-  font-size:44px;
+.services-heading{
+  font-size:2.4rem;
   color:var(--accent);
-  margin-bottom:40px;
+  margin-bottom:12px;
   font-family:'Poppins', sans-serif;
-  letter-spacing:1px;
+  font-weight:700;
+}
+
+.services-subtitle{
+  font-size:1.1rem;
+  color:rgba(245,245,245,0.7);
+  margin-bottom:48px;
+  letter-spacing:0.5px;
 }
 
 .service-grid{
@@ -1265,6 +1272,200 @@ button:focus, a:focus, input:focus, textarea:focus{
   margin-bottom:10px;
   line-height:1.7;
 }
+
+/* SERVICE BOX STYLES */
+
+.service-box{
+  background:var(--glass-bg);
+  border:1px solid rgba(176,141,87,0.1);
+  border-radius:18px;
+  padding:32px 24px;
+  backdrop-filter:blur(6px);
+  text-align:center;
+  transition:all 0.3s ease;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.service-box:hover{
+  border-color:rgba(176,141,87,0.3);
+  background:rgba(176,141,87,0.04);
+  transform:translateY(-6px);
+  box-shadow:0 12px 32px rgba(176,141,87,0.15);
+}
+
+.service-box h3{
+  font-size:1.4rem;
+  margin-bottom:16px;
+  color:var(--accent);
+  font-family:'Poppins', sans-serif;
+  font-weight:700;
+}
+
+.service-box p{
+  font-size:0.95rem;
+  color:rgba(245,245,245,0.85);
+  line-height:1.8;
+  margin-bottom:20px;
+  flex-grow:1;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:24px;
+  max-width:1200px;
+  margin:0 auto 40px;
+  padding:0 20px;
+}
+
+.info-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 28px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  background:var(--accent);
+  color:var(--bg-primary);
+  transition:all 0.3s ease;
+  font-size:0.95rem;
+}
+
+.info-btn:hover{
+  background:rgba(176,141,87,0.9);
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(176,141,87,0.3);
+}
+
+.service-actions{
+  margin-top:auto;
+  padding-top:16px;
+}
+
+.back-home-btn{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.06);
+  color:var(--text);
+  text-decoration:none;
+  border:1px solid rgba(176,141,87,0.2);
+  font-weight:700;
+  transition:all 0.3s ease;
+  margin-top:20px;
+}
+
+.back-home-btn:hover{
+  background:rgba(176,141,87,0.1);
+  color:var(--accent);
+  transform:translateY(-2px);
+}
+
+/* SOCIAL BUBBLE GROUP */
+
+.social-bubble-group{
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:12px;
+  z-index:999;
+}
+
+.social-bubble-toggle{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:var(--accent);
+  border:none;
+  color:var(--bg-primary);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all 0.3s ease;
+  box-shadow:0 4px 16px rgba(176,141,87,0.3);
+}
+
+.social-bubble-toggle:hover{
+  transform:scale(1.1);
+  box-shadow:0 6px 20px rgba(176,141,87,0.4);
+}
+
+.social-bubbles{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  opacity:0;
+  transform:translateY(20px) scale(0.8);
+  pointer-events:none;
+  transition:all 0.3s ease;
+}
+
+.social-bubble-group.open .social-bubbles{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  pointer-events:all;
+}
+
+.social-bubble{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  position:relative;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.social-bubble.linkedin{
+  background:#0A66C2;
+  color:white;
+}
+
+.social-bubble.facebook{
+  background:#1877F2;
+  color:white;
+}
+
+.social-bubble.email{
+  background:var(--accent);
+  color:var(--bg-primary);
+}
+
+.social-bubble:hover{
+  transform:scale(1.15);
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);
+}
+
+.social-label{
+  position:absolute;
+  right:65px;
+  background:rgba(0,0,0,0.8);
+  color:white;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:0.85rem;
+  white-space:nowrap;
+  opacity:0;
+  transition:opacity 0.2s ease;
+  pointer-events:none;
+}
+
+.social-bubble:hover .social-label{
+  opacity:1;
+}
+
+/* WHATSAPP BUTTON */
 
 iframe{
   width:100%;

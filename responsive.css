@@ -251,9 +251,15 @@
     font-size:24px;
   }
 
-  .service-content p{
+  .service-box p{
     font-size:15px;
     line-height:1.8;
+  }
+
+  .info-btn{
+    width:100%;
+    padding:16px 20px;
+    font-size:15px;
   }
 
   /* CONTACT */

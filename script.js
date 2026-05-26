@@ -356,3 +356,34 @@ document.addEventListener('DOMContentLoaded', () => {
     mo.observe(sidebar, { attributes: true, attributeFilter: ['class'] });
   }
 })();
+
+// Social bubble group toggle functionality
+(function(){
+  const bubbleGroup = document.querySelector('.social-bubble-group');
+  const toggleBtn = document.querySelector('.social-bubble-toggle');
+  const bubbles = document.querySelectorAll('.social-bubble');
+  
+  if (!bubbleGroup || !toggleBtn) return;
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = bubbleGroup.classList.contains('open');
+    bubbleGroup.classList.toggle('open');
+    toggleBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+  });
+
+  // Close bubbles when clicking on a social link
+  bubbles.forEach(bubble => {
+    bubble.addEventListener('click', () => {
+      bubbleGroup.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close bubbles when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!bubbleGroup.contains(e.target)) {
+      bubbleGroup.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
