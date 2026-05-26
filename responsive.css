@@ -159,3 +159,141 @@
     height:300px;
   }
 }
+
+/* ========================================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ========================================= */
+
+@media screen and (max-width: 768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  section{
+    padding:50px 20px;
+  }
+
+  /* HERO SECTION */
+
+  .hero{
+    min-height:100vh;
+    text-align:center;
+    padding-top:100px;
+  }
+
+  .logo{
+    width:160px;
+    margin-bottom:20px;
+  }
+
+  .company-name{
+    font-size:38px;
+    line-height:1.2;
+  }
+
+  .tagline{
+    font-size:14px;
+    letter-spacing:3px;
+    margin-bottom:30px;
+  }
+
+  .hero p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  /* ABOUT GRID */
+
+  .about-grid{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .card{
+    padding:25px;
+    border-radius:18px;
+  }
+
+  .card h2{
+    font-size:22px;
+  }
+
+  .card p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  /* SERVICES */
+
+  .services{
+    text-align:center;
+  }
+
+  .services-title{
+    font-size:32px;
+    margin-bottom:40px;
+  }
+
+  .service-grid{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .service-box{
+    padding:30px 25px;
+    border-radius:18px;
+  }
+
+  .service-box h3{
+    font-size:24px;
+  }
+
+  .service-content p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  /* CONTACT */
+
+  .contact h2{
+    font-size:32px;
+  }
+
+  .contact-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+  }
+
+  .contact-info{
+    padding:30px 25px;
+  }
+
+  .contact-info p{
+    font-size:15px;
+  }
+
+  iframe{
+    height:300px;
+  }
+
+  /* BUTTONS */
+
+  .enquiry-btn,
+  .download-btn{
+    width:100%;
+    text-align:center;
+    padding:16px;
+    font-size:15px;
+  }
+
+  /* NAVIGATION */
+
+  nav{
+    padding:15px 20px;
+  }
+
+}
